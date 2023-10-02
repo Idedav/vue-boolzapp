@@ -34,10 +34,10 @@
             <div class="contact-account">
                 <div class="profile">
                     <div class="image">
-                        <img src="img/avatar_2.jpg" alt="">
+                        <img :src="contacts[counterChat].avatar" alt="">
                     </div>
                     <div class="name">
-                        <p>Michele</p>
+                        <p>{{ contacts[counterChat].name }}</p>
                         <span>Ultimo accesso oggi alle 12:00</span>
                     </div>
                 </div>
@@ -78,7 +78,9 @@
             <div class="contacts-list">
                 <ul>
                     
-                    <li v-for="contact in contacts">
+                    <li 
+                    @click="counterChat = index"
+                    v-for="(contact, index) in contacts">
                         <div class="profile">
                             <div class="image">
                                 <img :src="contact.avatar" alt="">
@@ -103,21 +105,13 @@
 
             <div class="chat">
                 
-                <div class="message my-message">
-                    <p>Hai portato a spasso il cane?</p>
+                <div 
+                v-for="message in contacts[counterChat].messages"
+                :class="message.status"
+                class="message">
+                    <p>{{ message.message }}</p>
                     <span>15:30</span>
                 </div>
-
-                <div class="message my-message">
-                    <p>Ricordati di stendere i panni</p>
-                    <span>15:35</span>
-                </div>
-
-                <div class="message contact-message">
-                    <p>Tutto fatto!</p>
-                    <span>16:30</span>
-                </div>
-
 
             </div>
             

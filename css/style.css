@@ -204,12 +204,12 @@ main{
 
 }
 
-.my-message{
+.sent{
     align-self: flex-end;
     background-color: #D5F9BA;
 }
 
-.contact-message{
+.received{
     align-self: flex-start;
 }
 /* SENT MESSAGE */
