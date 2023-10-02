@@ -29,16 +29,17 @@ i{
 header{
     width: 100%;
     height: 80px;
-    background-color: rebeccapurple;
+    display: flex;
+    background-color: #EAEAEA;
 }
 /* ACCOUNT */
-.account{
+.my-account{
     height: 100%;
-    width: 100%;
-    background-color: #EAEAEA;
+    width: 35%;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    border-right: 1px solid #D6D6D6;
 }
 
 .profile{
@@ -63,8 +64,16 @@ img{
 
 .icons i{
     font-size: 1.5rem;
-    margin: 5px;
+    margin: 10px;
 }
+
+.contact-account{
+    width: 65%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 /* ASIDE */
 aside{
     width: 35%;
