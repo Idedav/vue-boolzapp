@@ -78,125 +78,13 @@
             <div class="contacts-list">
                 <ul>
                     
-                    <li>
+                    <li v-for="contact in contacts">
                         <div class="profile">
                             <div class="image">
-                                <img src="img/avatar_2.jpg" alt="">
+                                <img :src="contact.avatar" alt="">
                             </div>
                             <div class="name">
-                                <p>Michele</p>
-                                <span>Ultimo messaggio inviato</span>
-                            </div>
-                        </div>
-
-                        <div class="time">
-                            <span>12:00</span>
-                        </div>
-                    </li>
-
-                    <li>
-                        <div class="profile">
-                            <div class="image">
-                                <img src="img/avatar_3.jpg" alt="">
-                            </div>
-                            <div class="name">
-                                <p>Alessandro</p>
-                                <span>Ultimo messaggio inviato</span>
-                            </div>
-                        </div>
-
-                        <div class="time">
-                            <span>12:00</span>
-                        </div>
-                    </li>
-
-                    <li>
-                        <div class="profile">
-                            <div class="image">
-                                <img src="img/avatar_4.jpg" alt="">
-                            </div>
-                            <div class="name">
-                                <p>Giovanni</p>
-                                <span>Ultimo messaggio inviato</span>
-                            </div>
-                        </div>
-
-                        <div class="time">
-                            <span>12:00</span>
-                        </div>
-                    </li>
-
-                    <li>
-                        <div class="profile">
-                            <div class="image">
-                                <img src="img/avatar_5.jpg" alt="">
-                            </div>
-                            <div class="name">
-                                <p>Andrea</p>
-                                <span>Ultimo messaggio inviato</span>
-                            </div>
-                        </div>
-
-                        <div class="time">
-                            <span>12:00</span>
-                        </div>
-                    </li>
-
-                    <li>
-                        <div class="profile">
-                            <div class="image">
-                                <img src="img/avatar_6.jpg" alt="">
-                            </div>
-                            <div class="name">
-                                <p>Giulia</p>
-                                <span>Ultimo messaggio inviato</span>
-                            </div>
-                        </div>
-
-                        <div class="time">
-                            <span>12:00</span>
-                        </div>
-                    </li>
-
-                    <li>
-                        <div class="profile">
-                            <div class="image">
-                                <img src="img/avatar_7.jpg" alt="">
-                            </div>
-                            <div class="name">
-                                <p>Simone</p>
-                                <span>Ultimo messaggio inviato</span>
-                            </div>
-                        </div>
-
-                        <div class="time">
-                            <span>12:00</span>
-                        </div>
-                    </li>
-
-                    <li>
-                        <div class="profile">
-                            <div class="image">
-                                <img src="img/avatar_8.jpg" alt="">
-                            </div>
-                            <div class="name">
-                                <p>Mirko</p>
-                                <span>Ultimo messaggio inviato</span>
-                            </div>
-                        </div>
-
-                        <div class="time">
-                            <span>12:00</span>
-                        </div>
-                    </li>
-
-                    <li>
-                        <div class="profile">
-                            <div class="image">
-                                <img src="img/avatar_1.jpg" alt="">
-                            </div>
-                            <div class="name">
-                                <p>Giuseppe</p>
+                                <p>{{ contact.name }}</p>
                                 <span>Ultimo messaggio inviato</span>
                             </div>
                         </div>
