@@ -153,6 +153,11 @@ ul li{
     border-top: 1px solid #F5F5F5;
 }
 
+ul li:hover{
+    background-color: #EAEAEA;
+    cursor: pointer;
+}
+
 .name span{
     font-size: .8rem;
     color: #CECAC6;
