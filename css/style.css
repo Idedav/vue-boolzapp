@@ -2,6 +2,7 @@
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 body{
@@ -12,10 +13,147 @@ body{
     align-items: center;
 }
 
+i{
+    color: #B1B1B1;
+}
+
 .container{
     width: 80%;
     min-width: 800px;
     height: 90vh;
     background-color: white;
+    display: flex;
+}
+/* ASIDE */
+aside{
+    width: 35%;
+    height: 100%;
+}
+
+.top-aside{
+    min-height: 200px;
+    height: 20%;
+}
+/* ACCOUNT */
+.account{
+    height: 35%;
+    width: 100%;
+    background-color: #EAEAEA;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.profile{
+    display: flex;
+    align-items: center;
+}
+
+.image{
+    width: 70px;
+    padding: 10px;
+}
+
+img{
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.icons{
+    margin-right: 15px;
+}
+
+.icons i{
+    font-size: 1.5rem;
+    margin: 5px;
+}
+/* NOTIFICATION */
+.notification{
+    height: 40%;
+    background-color: #8CD7F9;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+.bell{
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bell i{
+    font-size: 1.5rem;
+    color: #8CD7F9;
+}
+
+.text{
+    margin-left: 15px;
+}
+
+.text a{
+    color: #4C7284;
+}
+
+/* SEARCH CONTACTS */
+.search{
+    height: 25%;
+    background-color: #FAFAFA;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search button{
+    padding: 10px 25px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border: 1px solid #F9F9F9;
+    background-color: white;
+    font-size: 1rem;
+}
+
+.search input{
+    width: 90%;
+    padding: 10px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border: 1px solid #F9F9F9;
+}
+
+/* CONTACTS LIST */
+.contacts-list{
+    height: 80%;
+    overflow-y: scroll;
+}
+
+ul li{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #F5F5F5;
+}
+
+.name span{
+    font-size: .8rem;
+    color: #CECAC6;
+}
+
+.time{
+    margin: 10px;
+    font-size: .8rem;
+    color: #CECAC6;
+}
+
+main{
+    width: 65%;
+    height: 100%;
+    background-color: yellowgreen;
 }
 
