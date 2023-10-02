@@ -175,12 +175,29 @@ createApp ({
             ],
 
             counterChat: 0,
+            newMessage: '',
+            newMessageContact: ''
             
         }
     },
 
     methods: {
+        sentMessage(){
+            this.contacts[this.counterChat].messages.push({ date: '10/01/2020 15:51:00', 
+                                                            message: this.newMessage, 
+                                                            status: 'sent'});
+            this.newMessage = '';
+            setTimeout(()=>{
+                this.receveMessage();
+            },1000);
+        },
 
+        receveMessage(){
+            this.newMessageContact = 'Ok!'
+            this.contacts[this.counterChat].messages.push({ date: '10/01/2020 15:51:00', 
+                                                            message: this.newMessageContact, 
+                                                            status:'received'});
+        }
     },
 
     mounted(){
