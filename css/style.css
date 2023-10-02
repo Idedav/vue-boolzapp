@@ -8,6 +8,7 @@
 body{
     height: 100vh;
     background-image: linear-gradient(#009688 10vh, 10vh, #D9DBD5 90vh);
+    background-repeat: no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
