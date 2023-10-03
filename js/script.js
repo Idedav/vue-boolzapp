@@ -1,3 +1,4 @@
+const dt = luxon.DateTime;
 const { createApp } = Vue;
 
 createApp ({
@@ -177,13 +178,15 @@ createApp ({
             counterChat: 0,
             newMessage: '',
             newMessageContact: '',
+            newDate:''
             
         }
     },
 
     methods: {
         sentMessage(){
-            this.contacts[this.counterChat].messages.push({ date: '10/01/2020 15:51:00', 
+            this.getDate();
+            this.contacts[this.counterChat].messages.push({ date: this.newDate, 
                                                             message: this.newMessage, 
                                                             status: 'sent'});
             this.newMessage = '';
@@ -193,10 +196,15 @@ createApp ({
         },
 
         receveMessage(){
+            this.getDate();
             this.newMessageContact = 'Ok!'
-            this.contacts[this.counterChat].messages.push({ date: '10/01/2020 15:51:00', 
+            this.contacts[this.counterChat].messages.push({ date: this.newDate, 
                                                             message: this.newMessageContact, 
                                                             status:'received'});
+        },
+
+        getDate(){
+            this.newDate = dt.now().setLocale('it').toLocaleString(dt.DATETIME_SHORT_WITH_SECONDS)
         },
         
     },
