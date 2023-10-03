@@ -38,7 +38,7 @@
                     </div>
                     <div class="name">
                         <p>{{ contacts[counterChat].name }}</p>
-                        <span>Ultimo accesso oggi alle 12:00</span>
+                        <span>Ultimo messaggio: {{ contacts[counterChat].messages[contacts[counterChat].messages.length-1].date }}</span>
                     </div>
                 </div>
 
@@ -88,12 +88,12 @@
                             </div>
                             <div class="name">
                                 <p>{{ contact.name }}</p>
-                                <span>{{ contact.messages[0].message }}</span>
+                                <span>{{ contact.messages[contact.messages.length-1].message }}</span>
                             </div>
                         </div>
 
                         <div class="time">
-                            <span>12:00</span>
+                            <span>{{ contact.messages[contact.messages.length-1].date }}</span>
                         </div>
                     </li>
                 </ul>
@@ -111,7 +111,7 @@
                 :class="message.status"
                 class="message">
                     <p>{{ message.message }}</p>
-                    <span>15:30</span>
+                    <span>{{ message.date }}</span>
                 </div>
 
             </div>

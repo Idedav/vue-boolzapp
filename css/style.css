@@ -151,6 +151,7 @@ ul li{
     display: flex;
     justify-content: space-between;
     border-top: 1px solid #F5F5F5;
+    position: relative;
 }
 
 ul li:hover{
@@ -169,8 +170,11 @@ li.active{
 
 .time{
     margin: 10px;
-    font-size: .8rem;
+    font-size: .7rem;
     color: #CECAC6;
+    position: absolute;
+    top: 0px;
+    right: 0px;
 }
 /* MAIN */
 main{

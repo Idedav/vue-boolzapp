@@ -176,7 +176,7 @@ createApp ({
 
             counterChat: 0,
             newMessage: '',
-            newMessageContact: ''
+            newMessageContact: '',
             
         }
     },
@@ -197,7 +197,8 @@ createApp ({
             this.contacts[this.counterChat].messages.push({ date: '10/01/2020 15:51:00', 
                                                             message: this.newMessageContact, 
                                                             status:'received'});
-        }
+        },
+        
     },
 
     mounted(){
