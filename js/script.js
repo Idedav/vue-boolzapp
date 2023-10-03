@@ -178,7 +178,8 @@ createApp ({
             counterChat: 0,
             newMessage: '',
             newMessageContact: '',
-            newDate:''
+            newDate:'',
+            filter:''
             
         }
     },
@@ -206,6 +207,18 @@ createApp ({
         getDate(){
             this.newDate = dt.now().setLocale('it').toLocaleString(dt.DATETIME_SHORT_WITH_SECONDS)
         },
+
+        filterContact(){
+            this.contacts.forEach((contact)=>{
+                const nameFormatted = contact.name.toUpperCase();
+                const filterFromatted = this.filter.toUpperCase();
+                if(!nameFormatted.includes(filterFromatted)){
+                    contact.visible = false;
+                }else{
+                    contact.visible = true;
+                }
+            })
+        }
         
     },
 

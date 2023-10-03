@@ -73,7 +73,11 @@
                 <!-- SEARCH CONTACTS -->
                 <div class="search">
                     <button><i class="fa-solid fa-magnifying-glass"></i></button>
-                    <input type="text" placeholder="Cerca o inizia una nuova chat">
+                    <input 
+                    @keyup="filterContact()"
+                    v-model.trim="filter"
+                    type="text" 
+                    placeholder="Cerca o inizia una nuova chat">
                 </div>
 
             <!-- CONTACTS LIST -->
@@ -81,6 +85,7 @@
                 <ul>
                     
                     <li 
+                    v-show="contact.visible === true"
                     @click="counterChat = index"
                     :class="{'active': counterChat === index}"
                     v-for="(contact, index) in contacts">
