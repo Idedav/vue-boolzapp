@@ -158,6 +158,10 @@ ul li:hover{
     cursor: pointer;
 }
 
+li.active{
+    background-color: #EAEAEA;
+}
+
 .name span{
     font-size: .8rem;
     color: #CECAC6;
