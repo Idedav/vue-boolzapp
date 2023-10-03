@@ -231,6 +231,18 @@ createApp ({
 
         deleteMessage(index){
             this.contacts[this.counterChat].messages.splice(index, 1);
+        },
+
+        printLastMess(contact){
+            if(this.contacts[this.counterChat].messages.length > 0){
+                return contact.messages[contact.messages.length-1].message 
+            }
+        },
+        
+        printLastDate(contact){
+            if(this.contacts[this.counterChat].messages.length > 0){
+                return contact.messages[contact.messages.length-1].date
+            }
         }
         
     },
