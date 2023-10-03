@@ -114,11 +114,20 @@
             <div class="chat">
                 
                 <div 
-                v-for="message in contacts[counterChat].messages"
+                v-for="(message, index) in contacts[counterChat].messages"
                 :class="message.status"
                 class="message">
                     <p>{{ message.message }}</p>
-                    <span>{{ message.date }}</span>
+                    <span class="date">{{ message.date }}</span>
+                    <i
+                    @click="toggleSelect(message)" 
+                    class="fa-solid fa-chevron-down"></i>
+                    <div
+                    v-show="messageCurrent === message" 
+                    class="option-container">
+                        <span>Info Messaggio</span>
+                        <span @click="deleteMessage(index)">Elimina Messaggio</span>
+                    </div>
                 </div>
 
             </div>

@@ -179,7 +179,8 @@ createApp ({
             newMessage: '',
             newMessageContact: '',
             newDate:'',
-            filter:''
+            filter:'',
+            messageCurrent: null,
             
         }
     },
@@ -218,6 +219,18 @@ createApp ({
                     contact.visible = true;
                 }
             })
+        },
+
+        toggleSelect(message){
+            if(this.messageCurrent === message){
+                this.messageCurrent = null;
+            }else{
+                this.messageCurrent = message;
+            }
+        },
+
+        deleteMessage(index){
+            this.contacts[this.counterChat].messages.splice(index, 1);
         }
         
     },

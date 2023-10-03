@@ -203,7 +203,7 @@ main{
     position: relative;
 }
 
-.message span{
+.message .date{
     font-size: .5rem;
     position: absolute;
     bottom: 2px;
@@ -211,6 +211,40 @@ main{
     color: #C1C5C4;
 
 }
+
+.message i{
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    color: black;
+    display: none;
+}
+
+.message:hover i{
+    display: block;
+    cursor: pointer;
+}
+
+.message .option-container{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 25px;
+    right: 0px;
+    background-color: #EAEAEA;
+    z-index: 1;
+}
+
+.message .option-container span{
+    font-size: .8rem;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.message .option-container span:hover{
+    background-color: #B1B1B1;
+}
+
 
 .sent{
     align-self: flex-end;
