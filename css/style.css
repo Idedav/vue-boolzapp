@@ -60,7 +60,8 @@ img{
 }
 
 .icons{
-    margin-right: 15px;
+    margin-right: 10px;
+    display: flex;
 }
 
 .icons i{
@@ -201,6 +202,7 @@ main{
     padding: 15px;
     font-size: .8rem;
     position: relative;
+    word-break: break-all;
 }
 
 .message .date{
@@ -290,5 +292,3 @@ main{
     color: black;
     font-size: 1.7rem;
 }
-
-

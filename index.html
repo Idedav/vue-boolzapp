@@ -27,6 +27,10 @@
                 </div>
 
                 <div class="icons">
+                    <div @click="darkMode = !darkMode">
+                        <i v-if="darkMode" class="fa-solid fa-moon"></i>
+                        <i v-else class="fa-solid fa-sun"></i>
+                    </div>
                     <i class="fa-solid fa-circle-notch"></i>
                     <i class="fa-solid fa-message"></i>
                     <i class="fa-solid fa-ellipsis-vertical"></i>
@@ -112,6 +116,9 @@
         <main>
 
             <div class="chat">
+                <div class="dark-mode-chat">
+
+                </div>
                 
                 <div 
                 v-for="(message, index) in contacts[counterChat].messages"
