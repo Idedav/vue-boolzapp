@@ -235,13 +235,13 @@ createApp ({
 
         printLastMess(contact){
             if(this.contacts[this.counterChat].messages.length > 0){
-                return contact.messages[contact.messages.length-1].message 
+                return contact.messages.at(-1).message
             }
         },
         
         printLastDate(contact){
             if(this.contacts[this.counterChat].messages.length > 0){
-                return contact.messages[contact.messages.length-1].date
+                return contact.messages.at(-1).date
             }
         }
         
