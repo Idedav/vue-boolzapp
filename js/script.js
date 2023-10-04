@@ -234,13 +234,13 @@ createApp ({
         },
 
         printLastMess(contact){
-            if(this.contacts[this.counterChat].messages.length > 0){
+            if(contact.messages.length > 0){
                 return contact.messages.at(-1).message
             }
         },
         
         printLastDate(contact){
-            if(this.contacts[this.counterChat].messages.length > 0){
+            if(contact.messages.length > 0){
                 return contact.messages.at(-1).date
             }
         }
