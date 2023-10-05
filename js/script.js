@@ -176,6 +176,7 @@ createApp ({
                 }
             ],
 
+            emojis: [{ emoji: '😀'},{ emoji: '😃'},{ emoji: '😄'},{ emoji: '😁'},{ emoji: '😆'},{ emoji: '😅'},{ emoji: '🤣'},{ emoji: '😂'},{ emoji: '🙂'},{ emoji: '😉'},{ emoji: '😊'},{ emoji: '😇'},{ emoji: '🥰'},{ emoji: '😍'},{ emoji: '🤩'},{ emoji: '😘'},{ emoji: '😗'},{ emoji: '😚'},{ emoji: '😙'},{ emoji: '🥲'},{ emoji: '😏'},{ emoji: '😋'},{ emoji: '😛'},{ emoji: '😜'},{ emoji: '🤪'},{ emoji: '😝'},{ emoji: '🤗'},{ emoji: '🤭'},{ emoji: '🫢'},{ emoji: '🫣'},{ emoji: '🤫'},{ emoji: '🤔'},{ emoji: '🫡'},{ emoji: '🤤'},{ emoji: '🤠'},{ emoji: '🥳'},{ emoji: '🥸'},{ emoji: '😎'},{ emoji: '🤓'},{ emoji: '🧐'},{ emoji: '🙃'},{ emoji: '🫠'},{ emoji: '🤐'},{ emoji: '🤨'},{ emoji: '😐'},{ emoji: '😑'},{ emoji: '😶'},{ emoji: '🫥'},{ emoji: '😶‍🌫️'},{ emoji: '😒'},{ emoji: '🙄'},{ emoji: '😬'},{ emoji: '😮‍💨'},{ emoji: '🤥'},{ emoji: '😌'},{ emoji: '😔'},{ emoji: '😪'},{ emoji: '😴'},{ emoji: '😷'},{ emoji: '🤒'},{ emoji: '🤕'},{ emoji: '🤢'},{ emoji: '🤮'},{ emoji: '🤧'},{ emoji: '🥵'},{ emoji: '🥶'},{ emoji: '🥴'},{ emoji: '😵'},{ emoji: '😵‍💫'},{ emoji: '🤯'},{ emoji: '🥱'},{ emoji: '😕'},{ emoji: '🫤'},{ emoji: '😟'},{ emoji: '🙁'},{ emoji: '☹️'},{ emoji: '😮'},{ emoji: '😯'},{ emoji: '😲'},{ emoji: '😳'},{ emoji: '🥺'},{ emoji: '🥹'},{ emoji: '😦'},{ emoji: '😧'},{ emoji: '😨'},{ emoji: '😰'},{ emoji: '😥'},{ emoji: '😢'},{ emoji: '😭'},{ emoji: '😱'},{ emoji: '😖'},{ emoji: '😣'},{ emoji: '😞'},{ emoji: '😓'},{ emoji: '😩'},{ emoji: '😫'},{ emoji: '😤'},{ emoji: '😡'},{ emoji: '😠'},{ emoji: '🤬'},{ emoji: '👿'},{ emoji: '😈'},{ emoji: '👿'},{ emoji: '💀'},{ emoji: '☠️'},{ emoji: '💩'},{ emoji: '🤡'},{ emoji: '👹'},{ emoji: '👺'},{ emoji: '👻'},{ emoji: '👽'},{ emoji: '👾'},{ emoji: '🤖'},{ emoji: '😺'},{ emoji: '😸'},{ emoji: '😹'},{ emoji: '😻'},{ emoji: '😼'},{ emoji: '😽'},{ emoji: '🙀'},{ emoji: '😿'},{ emoji: '😾'},{ emoji: '🙈'},{ emoji: '🙉'},{ emoji: '🙊'},],
             counterChat: 0,
             newMessage: '',
             newMessageContact: '',
@@ -183,6 +184,8 @@ createApp ({
             filter:'',
             messageCurrent: null,
             darkMode: false,
+            showEmojis: false,
+            counterEmoji: 0
             
         }
     },
@@ -245,6 +248,12 @@ createApp ({
             if(contact.messages.length > 0){
                 return contact.messages.at(-1).date
             }
+        },
+
+        selectEmoji(index){
+            this.counterEmoji = index
+            this.newMessage += this.emojis[this.counterEmoji].emoji
+            document.querySelector('.writing-message input').focus();
         }
         
     },

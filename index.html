@@ -115,10 +115,8 @@
 
         <main>
 
-            <div class="chat">
-                <div class="dark-mode-chat">
-
-                </div>
+            <div :class="{'fix-chat' : showEmojis === true}"
+            class="chat">
                 
                 <div 
                 v-for="(message, index) in contacts[counterChat].messages"
@@ -136,17 +134,27 @@
                         <span @click="deleteMessage(index)">Elimina Messaggio</span>
                     </div>
                 </div>
-
             </div>
-            
-            <div class="sent-message">
-                <div class="emojis">
+
+            <div :class="{'fix-sent-message' : showEmojis === true}"
+            class="sent-message">
+                <div 
+                v-show="showEmojis === true"
+                class="container-emojis">
+                <div @click="selectEmoji(index)"
+                class="emoji"
+                    v-for="(emoji, index) in emojis">
+                        <span>{{ emoji.emoji }}</span>
+                    </div>
+                </div>
+                <div @click="showEmojis = !showEmojis"
+                class="emojis">
                     <i class="fa-regular fa-face-smile"></i>
                 </div>
                 <div class="writing-message">
                     <input 
                     @keyup.enter="sentMessage()"
-                    v-model="newMessage"
+                    v-model.trim ="newMessage"
                     type="text" 
                     placeholder="Scrivi un messaggio">
                 </div>
