@@ -176,7 +176,7 @@ createApp ({
                 }
             ],
 
-            emojis: [{ emoji: '😀'},{ emoji: '😃'},{ emoji: '😄'},{ emoji: '😁'},{ emoji: '😆'},{ emoji: '😅'},{ emoji: '🤣'},{ emoji: '😂'},{ emoji: '🙂'},{ emoji: '😉'},{ emoji: '😊'},{ emoji: '😇'},{ emoji: '🥰'},{ emoji: '😍'},{ emoji: '🤩'},{ emoji: '😘'},{ emoji: '😗'},{ emoji: '😚'},{ emoji: '😙'},{ emoji: '🥲'},{ emoji: '😏'},{ emoji: '😋'},{ emoji: '😛'},{ emoji: '😜'},{ emoji: '🤪'},{ emoji: '😝'},{ emoji: '🤗'},{ emoji: '🤭'},{ emoji: '🫢'},{ emoji: '🫣'},{ emoji: '🤫'},{ emoji: '🤔'},{ emoji: '🫡'},{ emoji: '🤤'},{ emoji: '🤠'},{ emoji: '🥳'},{ emoji: '🥸'},{ emoji: '😎'},{ emoji: '🤓'},{ emoji: '🧐'},{ emoji: '🙃'},{ emoji: '🫠'},{ emoji: '🤐'},{ emoji: '🤨'},{ emoji: '😐'},{ emoji: '😑'},{ emoji: '😶'},{ emoji: '🫥'},{ emoji: '😶‍🌫️'},{ emoji: '😒'},{ emoji: '🙄'},{ emoji: '😬'},{ emoji: '😮‍💨'},{ emoji: '🤥'},{ emoji: '😌'},{ emoji: '😔'},{ emoji: '😪'},{ emoji: '😴'},{ emoji: '😷'},{ emoji: '🤒'},{ emoji: '🤕'},{ emoji: '🤢'},{ emoji: '🤮'},{ emoji: '🤧'},{ emoji: '🥵'},{ emoji: '🥶'},{ emoji: '🥴'},{ emoji: '😵'},{ emoji: '😵‍💫'},{ emoji: '🤯'},{ emoji: '🥱'},{ emoji: '😕'},{ emoji: '🫤'},{ emoji: '😟'},{ emoji: '🙁'},{ emoji: '☹️'},{ emoji: '😮'},{ emoji: '😯'},{ emoji: '😲'},{ emoji: '😳'},{ emoji: '🥺'},{ emoji: '🥹'},{ emoji: '😦'},{ emoji: '😧'},{ emoji: '😨'},{ emoji: '😰'},{ emoji: '😥'},{ emoji: '😢'},{ emoji: '😭'},{ emoji: '😱'},{ emoji: '😖'},{ emoji: '😣'},{ emoji: '😞'},{ emoji: '😓'},{ emoji: '😩'},{ emoji: '😫'},{ emoji: '😤'},{ emoji: '😡'},{ emoji: '😠'},{ emoji: '🤬'},{ emoji: '👿'},{ emoji: '😈'},{ emoji: '👿'},{ emoji: '💀'},{ emoji: '☠️'},{ emoji: '💩'},{ emoji: '🤡'},{ emoji: '👹'},{ emoji: '👺'},{ emoji: '👻'},{ emoji: '👽'},{ emoji: '👾'},{ emoji: '🤖'},{ emoji: '😺'},{ emoji: '😸'},{ emoji: '😹'},{ emoji: '😻'},{ emoji: '😼'},{ emoji: '😽'},{ emoji: '🙀'},{ emoji: '😿'},{ emoji: '😾'},{ emoji: '🙈'},{ emoji: '🙉'},{ emoji: '🙊'},],
+            emojis: ['😀','😃','😄','😁','😆','😅','🤣','😂','🙂','😉','😊','😇','🥰','😍','🤩','😘','😗','😚','😙','🥲','😏','😋','😛','😜','🤪','😝','🤗','🤭','🫢','🫣','🤫','🤔','🫡','🤤','🤠','🥳','🥸','😎','🤓','🧐','🙃','🫠','🤐','🤨','😐','😑','😶','🫥','😶‍🌫️','😒','🙄','😬','😮‍💨','🤥','😌','😔','😪','😴','😷','🤒','🤕','🤢','🤮','🤧','🥵','🥶','🥴','😵','😵‍💫','🤯','🥱','😕','🫤','😟','🙁','☹️','😮','😯','😲','😳','🥺','🥹','😦','😧','😨','😰','😥','😢','😭','😱','😖','😣','😞','😓','😩','😫','😤','😡','😠','🤬','👿','😈','👿','💀','☠️','💩','🤡','👹','👺','👻','👽','👾','🤖','😺','😸','😹','😻','😼','😽','🙀','😿','😾','🙈','🙉','🙊'],
             counterChat: 0,
             newMessage: '',
             newMessageContact: '',
@@ -204,7 +204,7 @@ createApp ({
 
         receveMessage(){
             this.getDate();
-            this.newMessageContact = 'Ok!'
+            this.newMessageContact = '👍🏻'
             this.contacts[this.counterChat].messages.push({ date: this.newDate, 
                                                             message: this.newMessageContact, 
                                                             status:'received'});
@@ -251,8 +251,8 @@ createApp ({
         },
 
         selectEmoji(index){
-            this.counterEmoji = index
-            this.newMessage += this.emojis[this.counterEmoji].emoji
+            this.counterEmoji = index;
+            this.newMessage += this.emojis[this.counterEmoji];
             document.querySelector('.writing-message input').focus();
         }
         
