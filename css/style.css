@@ -299,6 +299,12 @@ main{
 .vocal i{
     color: black;
     font-size: 1.7rem;
+    cursor: pointer;
+}
+
+.vocal svg:hover{
+    color: #51aa0d;
+    cursor: pointer;
 }
 
 .container-emojis{
